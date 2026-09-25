@@ -99,7 +99,7 @@ public class inventarioTienda {
 
       double valorTotalInventario = 0;
 
-      for(int i=0; i < total;i++){
+      for(int i=0; i < total ; i++){
         double valorProducto = cantidad[i] * precio[i];
         valorTotalInventario  =  valorTotalInventario + valorProducto;
 
@@ -116,34 +116,44 @@ public class inventarioTienda {
 
       }
 
-      // se imprime el reporte final
-
-      System.out.println("reporte final del inventario");
+      // se imprime el reporte finaL
+      System.out.println("============================");
+      System.out.println("REPORTE FINAL DE INVENTARIO");
+       System.out.println("============================");
 
       // detalles por producto
 
-      System.out.println("detalle de productos");
+      System.out.println("DETALLES DE PRODUCTOS");
       
-      for (int i = 0;i < total; i++ ) {
+      for (int i = 0; i < total; i++ ) {
         double valorProducto = cantidad[i] * precio[i];
         String nombreCat = categorias[categoria[i]];
 
-          System.out.println("producto:" + nombre + "cantidad" + cantidad[i] + "precio"+precio[i] + "total" + valorProducto + "categoria" + nombreCat);
+          System.out.println("producto:" + nombre[i] + 
+                           " |   cantidad" + cantidad[i] + 
+                          "  |   precio" + precio[i] + 
+                           " |   total" + valorProducto + 
+                           " |   categoria" + nombreCat);
           
       }
 
-      System.out.println("resumen por categoria");
-      for (int c = 0; c < categoria.length; c++){
-        System.out.println("categoria" + categoria[c] + "cantidad total" + matrizInventario[c][0] + "valor total" + matrizInventario[c][1]);
+      System.out.println("RESUMEN TOTAL POR CATEGORIA");
+      
+      for (int c = 0; c < categoria.length; c++) {
+       
+        System.out.println("  * " + categorias[c] + 
+                             "   ->   Cantidad Total: " + matrizInventario[c][0] + 
+                             " unidades   |   Valor Acumulado: $" + matrizInventario[c][1]);
+    
 
       }
 
       double iva = valorTotalInventario * 0.19;
       double totalConIva = valorTotalInventario + iva;
 
-      System.out.println("Resumen Economico");
+      System.out.println("RESUMEN ECONOMICO");
       System.out.println("subTotal inventario:" + valorTotalInventario);
-      System.out.println("iva:" + iva);
+      System.out.println("iva (19%)" + iva);
       System.out.println("valor total:" + totalConIva);
       
 
