@@ -129,11 +129,11 @@ public class inventarioTienda {
         double valorProducto = cantidad[i] * precio[i];
         String nombreCat = categorias[categoria[i]];
 
-          System.out.println("producto:" + nombre[i] + 
-                           " |   cantidad" + cantidad[i] + 
-                          "  |   precio" + precio[i] + 
-                           " |   total" + valorProducto + 
-                           " |   categoria" + nombreCat);
+          System.out.println(" producto: " + nombre[i] + 
+                           " |   cantidad " + cantidad[i] + 
+                           " |   precio " + precio[i] + 
+                           " |   total " + valorProducto + 
+                           " |   categoria " + nombreCat);
           
       }
 
@@ -142,8 +142,8 @@ public class inventarioTienda {
       for (int c = 0; c < categoria.length; c++) {
        
         System.out.println("  * " + categorias[c] + 
-                             "   ->   Cantidad Total: " + matrizInventario[c][0] + 
-                             " unidades   |   Valor Acumulado: $" + matrizInventario[c][1]);
+                             "   ->   Cantidad Total: " + matrizInventario[c][0] + "unidades" +
+                             " |  Valor Acumulado: $" + matrizInventario[c][1]);
     
 
       }
